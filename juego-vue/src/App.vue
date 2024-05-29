@@ -5,6 +5,7 @@
     <div class="app__turn-message">
       <h2>{{ turnMessage }}</h2>
     </div>
+<Instructivo/>
     
     <!-- Tablero de juego -->
     <Board :board="board" :players="players" @cellClicked="handleCellClick" />
@@ -34,10 +35,12 @@
 </template>
 
 <script>
+import Instructivo from './components/moleculas/instructivo.vue';
 import Board from './components/organismos/Board.vue';
 
 export default {
-  components: { Board },
+  components: { Instructivo, Board },
+
   data() {
     return {
       // Datos iniciales del juego
